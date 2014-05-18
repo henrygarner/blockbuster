@@ -1,0 +1,4 @@
+#!/bin/bash
+path=$( cd "$(dirname $( dirname "${BASH_SOURCE[0]}" ) )" && pwd )
+cd $path
+java -jar target/blockbuster-0.1.0-standalone.jar "$@"

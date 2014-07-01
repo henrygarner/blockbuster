@@ -135,13 +135,13 @@
    ["-m" "--pause MILLIS" "Milliseconds to pause between frames"
     :default 0
     :parse-fn #(Long/parseLong %)]
-   ["-c" "--clear" "Whether space should be cleared for the screen"
-    :default true]])
+   ["-c" "--clear" "Whether space should be cleared for the screen"]])
 
 (defn -main [& args]
   (let [parsed-args (parse-opts args cli-options)
         options (-> parsed-args
                     :options
                     (rename-keys {:file :path}))]
-    (clear-space! options)
+    (when (:clear options)
+      (clear-space! options))
     (draw-movie! options)))

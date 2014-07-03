@@ -28,6 +28,11 @@ will render the simpsons.mp4 on a screen 50 voxels wide at coordinates
 bin/blockbuster -f simpsons.mp4 -p 0,5,0 -w 50 -c
 ```
 
+## See Also
+
+[Redstone](https://github.com/henrygarner/redstone) is the library
+Blockbuster uses to send instructions to Minecraft from Clojure.
+
 ## License
 
 Copyright © 2014 Henry Garner
